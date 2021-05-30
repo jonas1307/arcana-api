@@ -4,6 +4,7 @@ const env = require("dotenv");
 
 module.exports = function (app) {
   env.config();
+  app.use(express.static("public"));
   app.use(express.json());
   app.use(cors());
 
